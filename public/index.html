@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Maze</title>
+    <script src="https://unpkg.com/htmx.org@2.0.4"></script>
+    <script src="https://unpkg.com/htmx.org@2.0.4/dist/ext/ws.js"></script>
+    <link href="./css/bulma.min.css" rel="stylesheet">
+</head>
+<body>
+<section class="container">
+    <div>
+        <form hx-ext="ws" ws-connect="/ws/generate" ws-send="true">
+            <label for="width">width </label>
+            <input id="width" name="width" type="text">
+            <label for="height">height </label>
+            <input id="height" name="height" type="text">
+            <button type="submit">Submit</button>
+        </form>
+        <br/>
+        <div id="content"></div>
+
+
+    </div>
+</section>
+
+</body>
+</html>
