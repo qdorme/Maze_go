@@ -1,0 +1,5 @@
+This project is a web application write in Golang, used to generate mazes.
+
+The UI is a simple HTML page.
+HTMX is used to establish a websocket connection to the back.
+It send the width and height of the maze to the back while the back send to the front the generation of the maze in live.
